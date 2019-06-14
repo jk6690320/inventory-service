@@ -4,8 +4,8 @@ buildscript {
     }
 
     repositories {
-        maven {url "http://nexus.cloud.school.thoughtworks.cn/repository/maven-public/"}
-        maven {url 'http://maven.aliyun.com/nexus/content/groups/public/'}
+        maven { url "http://nexus.cloud.school.thoughtworks.cn/repository/maven-public/" }
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
         mavenCentral()
     }
 
@@ -35,8 +35,8 @@ jar {
 }
 
 repositories {
-    maven {url "http://nexus.cloud.school.thoughtworks.cn/repository/maven-public/"}
-    maven {url 'http://maven.aliyun.com/nexus/content/groups/public/'}
+    maven { url "http://nexus.cloud.school.thoughtworks.cn/repository/maven-public/" }
+    maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
     mavenCentral()
 }
 
@@ -45,8 +45,7 @@ ext {
 }
 
 dependencies {
-    //TODO: Add actuator starter
-
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
     implementation 'org.springframework.cloud:spring-cloud-starter-bus-amqp'
 
     implementation 'org.springframework.cloud:spring-cloud-starter-config'
